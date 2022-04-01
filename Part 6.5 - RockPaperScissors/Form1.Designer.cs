@@ -1,6 +1,6 @@
 ﻿namespace Part_6._5___RockPaperScissors
 {
-    partial class Form1
+    partial class frmRockPaperScissors
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRockPaperScissors));
             this.lblEnemyWins = new System.Windows.Forms.Label();
             this.lblPLayerWinCounter = new System.Windows.Forms.Label();
             this.lblPlayerWins = new System.Windows.Forms.Label();
             this.lblEnemyWinsCounter = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgPlayer = new System.Windows.Forms.PictureBox();
             this.imgOpponent = new System.Windows.Forms.PictureBox();
             this.grpPlayerChoice = new System.Windows.Forms.GroupBox();
-            this.radRock = new System.Windows.Forms.RadioButton();
-            this.radPaper = new System.Windows.Forms.RadioButton();
             this.radScissors = new System.Windows.Forms.RadioButton();
+            this.radPaper = new System.Windows.Forms.RadioButton();
+            this.radRock = new System.Windows.Forms.RadioButton();
             this.btnPlay = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblOutput = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).BeginInit();
             this.grpPlayerChoice.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblEnemyWins
             // 
-            this.lblEnemyWins.Location = new System.Drawing.Point(12, 325);
+            this.lblEnemyWins.Location = new System.Drawing.Point(12, 362);
             this.lblEnemyWins.Name = "lblEnemyWins";
             this.lblEnemyWins.Size = new System.Drawing.Size(302, 35);
             this.lblEnemyWins.TabIndex = 2;
@@ -57,7 +58,7 @@
             // lblPLayerWinCounter
             // 
             this.lblPLayerWinCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPLayerWinCounter.Location = new System.Drawing.Point(379, 366);
+            this.lblPLayerWinCounter.Location = new System.Drawing.Point(379, 397);
             this.lblPLayerWinCounter.Name = "lblPLayerWinCounter";
             this.lblPLayerWinCounter.Size = new System.Drawing.Size(302, 81);
             this.lblPLayerWinCounter.TabIndex = 3;
@@ -66,9 +67,9 @@
             // 
             // lblPlayerWins
             // 
-            this.lblPlayerWins.Location = new System.Drawing.Point(379, 325);
+            this.lblPlayerWins.Location = new System.Drawing.Point(379, 362);
             this.lblPlayerWins.Name = "lblPlayerWins";
-            this.lblPlayerWins.Size = new System.Drawing.Size(302, 41);
+            this.lblPlayerWins.Size = new System.Drawing.Size(302, 35);
             this.lblPlayerWins.TabIndex = 4;
             this.lblPlayerWins.Text = "Player Wins";
             this.lblPlayerWins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,29 +77,29 @@
             // lblEnemyWinsCounter
             // 
             this.lblEnemyWinsCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnemyWinsCounter.Location = new System.Drawing.Point(12, 360);
+            this.lblEnemyWinsCounter.Location = new System.Drawing.Point(12, 397);
             this.lblEnemyWinsCounter.Name = "lblEnemyWinsCounter";
             this.lblEnemyWinsCounter.Size = new System.Drawing.Size(302, 81);
             this.lblEnemyWinsCounter.TabIndex = 5;
             this.lblEnemyWinsCounter.Text = "0";
             this.lblEnemyWinsCounter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // imgPlayer
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(379, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(318, 310);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.imgPlayer.Image = global::Part_6._5___RockPaperScissors.Properties.Resources.Between_Rounds;
+            this.imgPlayer.Location = new System.Drawing.Point(379, 49);
+            this.imgPlayer.Name = "imgPlayer";
+            this.imgPlayer.Size = new System.Drawing.Size(318, 310);
+            this.imgPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgPlayer.TabIndex = 1;
+            this.imgPlayer.TabStop = false;
             // 
             // imgOpponent
             // 
             this.imgOpponent.ErrorImage = ((System.Drawing.Image)(resources.GetObject("imgOpponent.ErrorImage")));
-            this.imgOpponent.Image = ((System.Drawing.Image)(resources.GetObject("imgOpponent.Image")));
+            this.imgOpponent.Image = global::Part_6._5___RockPaperScissors.Properties.Resources.Between_Rounds;
             this.imgOpponent.InitialImage = ((System.Drawing.Image)(resources.GetObject("imgOpponent.InitialImage")));
-            this.imgOpponent.Location = new System.Drawing.Point(12, 12);
+            this.imgOpponent.Location = new System.Drawing.Point(12, 49);
             this.imgOpponent.Name = "imgOpponent";
             this.imgOpponent.Size = new System.Drawing.Size(302, 310);
             this.imgOpponent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,16 +118,16 @@
             this.grpPlayerChoice.TabStop = false;
             this.grpPlayerChoice.Text = "Player Choice";
             // 
-            // radRock
+            // radScissors
             // 
-            this.radRock.AutoSize = true;
-            this.radRock.Location = new System.Drawing.Point(8, 31);
-            this.radRock.Name = "radRock";
-            this.radRock.Size = new System.Drawing.Size(51, 17);
-            this.radRock.TabIndex = 0;
-            this.radRock.TabStop = true;
-            this.radRock.Text = "Rock";
-            this.radRock.UseVisualStyleBackColor = true;
+            this.radScissors.AutoSize = true;
+            this.radScissors.Location = new System.Drawing.Point(8, 77);
+            this.radScissors.Name = "radScissors";
+            this.radScissors.Size = new System.Drawing.Size(64, 17);
+            this.radScissors.TabIndex = 2;
+            this.radScissors.TabStop = true;
+            this.radScissors.Text = "Scissors";
+            this.radScissors.UseVisualStyleBackColor = true;
             // 
             // radPaper
             // 
@@ -139,16 +140,16 @@
             this.radPaper.Text = "Paper";
             this.radPaper.UseVisualStyleBackColor = true;
             // 
-            // radScissors
+            // radRock
             // 
-            this.radScissors.AutoSize = true;
-            this.radScissors.Location = new System.Drawing.Point(8, 77);
-            this.radScissors.Name = "radScissors";
-            this.radScissors.Size = new System.Drawing.Size(64, 17);
-            this.radScissors.TabIndex = 2;
-            this.radScissors.TabStop = true;
-            this.radScissors.Text = "Scissors";
-            this.radScissors.UseVisualStyleBackColor = true;
+            this.radRock.AutoSize = true;
+            this.radRock.Location = new System.Drawing.Point(8, 31);
+            this.radRock.Name = "radRock";
+            this.radRock.Size = new System.Drawing.Size(51, 17);
+            this.radRock.TabIndex = 0;
+            this.radRock.TabStop = true;
+            this.radRock.Text = "Rock";
+            this.radRock.UseVisualStyleBackColor = true;
             // 
             // btnPlay
             // 
@@ -158,23 +159,34 @@
             this.btnPlay.TabIndex = 7;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
-            // Form1
+            // lblOutput
+            // 
+            this.lblOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutput.Location = new System.Drawing.Point(12, 9);
+            this.lblOutput.Name = "lblOutput";
+            this.lblOutput.Size = new System.Drawing.Size(685, 37);
+            this.lblOutput.TabIndex = 8;
+            this.lblOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // frmRockPaperScissors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 450);
+            this.ClientSize = new System.Drawing.Size(814, 487);
+            this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.grpPlayerChoice);
             this.Controls.Add(this.lblEnemyWinsCounter);
             this.Controls.Add(this.lblPlayerWins);
             this.Controls.Add(this.lblPLayerWinCounter);
             this.Controls.Add(this.lblEnemyWins);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imgPlayer);
             this.Controls.Add(this.imgOpponent);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Name = "frmRockPaperScissors";
+            this.Text = "Rock Paper Scissors";
+            ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).EndInit();
             this.grpPlayerChoice.ResumeLayout(false);
             this.grpPlayerChoice.PerformLayout();
@@ -185,7 +197,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox imgOpponent;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgPlayer;
         private System.Windows.Forms.Label lblEnemyWins;
         private System.Windows.Forms.Label lblPLayerWinCounter;
         private System.Windows.Forms.Label lblPlayerWins;
@@ -195,6 +207,7 @@
         private System.Windows.Forms.RadioButton radPaper;
         private System.Windows.Forms.RadioButton radRock;
         private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Label lblOutput;
     }
 }
 
