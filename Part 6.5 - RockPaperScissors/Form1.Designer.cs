@@ -41,6 +41,9 @@
             this.radRock = new System.Windows.Forms.RadioButton();
             this.btnPlay = new System.Windows.Forms.Button();
             this.lblOutput = new System.Windows.Forms.Label();
+            this.lblGamesPlayed = new System.Windows.Forms.Label();
+            this.lblGamesPlayedCounter = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).BeginInit();
             this.grpPlayerChoice.SuspendLayout();
@@ -108,9 +111,12 @@
             // 
             // grpPlayerChoice
             // 
+            this.grpPlayerChoice.BackColor = System.Drawing.Color.DarkCyan;
             this.grpPlayerChoice.Controls.Add(this.radScissors);
             this.grpPlayerChoice.Controls.Add(this.radPaper);
             this.grpPlayerChoice.Controls.Add(this.radRock);
+            this.grpPlayerChoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grpPlayerChoice.ForeColor = System.Drawing.Color.Black;
             this.grpPlayerChoice.Location = new System.Drawing.Point(703, 92);
             this.grpPlayerChoice.Name = "grpPlayerChoice";
             this.grpPlayerChoice.Size = new System.Drawing.Size(99, 100);
@@ -153,6 +159,7 @@
             // 
             // btnPlay
             // 
+            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay.Location = new System.Drawing.Point(703, 211);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(99, 23);
@@ -170,11 +177,49 @@
             this.lblOutput.TabIndex = 8;
             this.lblOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblGamesPlayed
+            // 
+            this.lblGamesPlayed.AutoSize = true;
+            this.lblGamesPlayed.Location = new System.Drawing.Point(310, 373);
+            this.lblGamesPlayed.Name = "lblGamesPlayed";
+            this.lblGamesPlayed.Size = new System.Drawing.Size(75, 13);
+            this.lblGamesPlayed.TabIndex = 9;
+            this.lblGamesPlayed.Text = "Games Played";
+            // 
+            // lblGamesPlayedCounter
+            // 
+            this.lblGamesPlayedCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGamesPlayedCounter.Location = new System.Drawing.Point(267, 401);
+            this.lblGamesPlayedCounter.Name = "lblGamesPlayedCounter";
+            this.lblGamesPlayedCounter.Size = new System.Drawing.Size(166, 64);
+            this.lblGamesPlayedCounter.TabIndex = 10;
+            this.lblGamesPlayedCounter.Text = "0";
+            this.lblGamesPlayedCounter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.ForeColor = System.Drawing.Color.Black;
+            this.btnReset.Location = new System.Drawing.Point(739, 464);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 11;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // frmRockPaperScissors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(814, 487);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.lblGamesPlayedCounter);
+            this.Controls.Add(this.lblGamesPlayed);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.grpPlayerChoice);
@@ -184,6 +229,7 @@
             this.Controls.Add(this.lblEnemyWins);
             this.Controls.Add(this.imgPlayer);
             this.Controls.Add(this.imgOpponent);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "frmRockPaperScissors";
             this.Text = "Rock Paper Scissors";
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).EndInit();
@@ -191,6 +237,7 @@
             this.grpPlayerChoice.ResumeLayout(false);
             this.grpPlayerChoice.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -208,6 +255,9 @@
         private System.Windows.Forms.RadioButton radRock;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Label lblOutput;
+        private System.Windows.Forms.Label lblGamesPlayed;
+        private System.Windows.Forms.Label lblGamesPlayedCounter;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 

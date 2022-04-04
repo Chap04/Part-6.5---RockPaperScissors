@@ -19,6 +19,12 @@ namespace Part_6._5___RockPaperScissors
         Random opponentChoice = new Random();
         int opponentChoiceStore;
         int playerChoiceStore;
+        bool playerWin;
+        bool playerLoss;
+        bool tieGame;
+        int playerScore;
+        int opponentScore;
+        int gamesPlayed;
         private void btnPlay_Click(object sender, EventArgs e)
         {
             if (radRock.Checked == true)
@@ -63,20 +69,82 @@ namespace Part_6._5___RockPaperScissors
                 if (opponentChoiceStore == 1)
                 {
                     lblOutput.Text = ("Tie!");
+                    tieGame = true;
                 }
                 else if (opponentChoiceStore == 2)
                 {
                     lblOutput.Text = ("You Lose! :(");
+                    playerLoss = true;
                 }
                 else if (opponentChoiceStore == 3)
                 {
                     lblOutput.Text = ("You Win! :)");
+                    playerWin = true;
                 }
             }
             else if (playerChoiceStore == 2)
             {
-
+                if (opponentChoiceStore == 1)
+                {
+                    lblOutput.Text = ("You Win! :)");
+                    playerWin = true;
+                }
+                else if (opponentChoiceStore == 2)
+                {
+                    lblOutput.Text = ("Tie!");
+                    tieGame = true;
+                }
+                else if (opponentChoiceStore == 3)
+                {
+                    lblOutput.Text = ("You Lose! :(");
+                    playerLoss = true;
+                }
             }
+            else if (playerChoiceStore == 3)
+            {
+                if (opponentChoiceStore == 1)
+                {
+                    lblOutput.Text = ("You Lose! :(");
+                    playerLoss = true;
+                }
+                else if (opponentChoiceStore == 2)
+                {
+                    lblOutput.Text = ("You Win! :)");
+                    playerWin = true;
+                }
+                else if (opponentChoiceStore == 3)
+                {
+                    lblOutput.Text = ("Tie!");
+                    tieGame = true;
+                }
+            }
+            if (playerWin == true)
+            {
+                playerScore++;
+                lblPLayerWinCounter.Text = playerScore+ "";
+                playerWin = false;
+            }
+            if (playerLoss == true)
+            {
+                opponentScore++;
+                lblEnemyWinsCounter.Text = opponentScore + "";
+                playerLoss = false;
+            }
+            gamesPlayed++;
+            lblGamesPlayedCounter.Text = (gamesPlayed + "");
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            imgOpponent.Image = Properties.Resources.Between_Rounds;
+            imgPlayer.Image = Properties.Resources.Between_Rounds;
+            playerScore = 0;
+            opponentScore = 0;
+            gamesPlayed = 0;
+            lblEnemyWinsCounter.Text = (opponentScore + "");
+            lblPLayerWinCounter.Text = (playerScore + "");
+            lblGamesPlayedCounter.Text = (gamesPlayed + "");
+            lblOutput.Text = ("");
         }
     }
 }
